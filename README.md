@@ -91,6 +91,3 @@ src/
 └── server.ts              # Express server
 public/index.html          # Live dashboard
 ```
-
----
-Made with ❤️ using Claude AI
