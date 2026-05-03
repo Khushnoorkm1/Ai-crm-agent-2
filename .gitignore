@@ -1,0 +1,9 @@
+.env
+node_modules/
+dist/
+recordings/*
+!recordings/.gitkeep
+logs/*
+!logs/.gitkeep
+*.log
+.DS_Store
