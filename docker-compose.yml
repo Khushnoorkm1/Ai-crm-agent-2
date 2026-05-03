@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+  crm:
+    build: .
+    container_name: ai-crm-pro
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file: .env
+    volumes:
+      - ./recordings:/app/recordings
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+networks:
+  default:
+    driver: bridge
